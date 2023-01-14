@@ -6,6 +6,8 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 
 import reducers from './store/reducers'
+import { HashRouter as Router } from 'react-router-dom'
+import { GoogleOAuthProvider } from '@react-oauth/google'
 
 import App from './app'
 import './index.css'
@@ -19,11 +21,13 @@ const store = createStore(reducers, compose(applyMiddleware(thunk)))
 //     , document.getElementById('root'))
 
 
-    const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <Provider store={store}>
-    {/* <Router> */}
+    {/*<GoogleOAuthProvider clientId='162363952181-kf63730gj3mibl31php8eb1lq1h0lkv5.apps.googleusercontent.com'>*/}
+    <Router>
       <App />
-    {/* </Router> */}
+    </Router>
+    {/* </GoogleOAuthProvider>*/}
   </Provider>
 )

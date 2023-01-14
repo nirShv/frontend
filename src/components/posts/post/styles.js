@@ -36,6 +36,13 @@ export default makeStyles({
   grid: {
     display: 'flex',
   },
+  noImg: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: '20px',
+    color:'black'
+  },
   details: {
     display: 'flex',
     justifyContent: 'space-between',
