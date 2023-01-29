@@ -24,10 +24,10 @@ const store = createStore(reducers, compose(applyMiddleware(thunk)))
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <Provider store={store}>
-    {/*<GoogleOAuthProvider clientId='162363952181-kf63730gj3mibl31php8eb1lq1h0lkv5.apps.googleusercontent.com'>*/}
-    <Router>
-      <App />
-    </Router>
-    {/* </GoogleOAuthProvider>*/}
+    <GoogleOAuthProvider clientId='162363952181-kf63730gj3mibl31php8eb1lq1h0lkv5.apps.googleusercontent.com'>
+      <Router>
+        <App />
+      </Router>
+    </GoogleOAuthProvider>
   </Provider>
 )
